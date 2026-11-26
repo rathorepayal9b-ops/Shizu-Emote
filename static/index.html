@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8fc">
+  <meta name="description" content="Shizuka — Free Fire emote control dashboard.">
+  <title>Shizuka | FF Emote Studio</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="rainbow-wash"></div><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="orb orb-three"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Shizuka home"><span class="brand-icon"><img src="/android-chrome-192x192.png" alt="Shizuka app icon"></span><span class="brand-copy">SHIZUKA <small>FF LIGHT THEME</small></span></a>
+    <div class="top-right"><span class="live-dot"></span><span>API DASHBOARD</span><span class="version">v1.0</span></div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <img class="shizuka-hero-art" src="/shizuka-ff-light-theme.jpg" alt="Shizuka FF Light Theme artwork">
+      <div class="eyebrow"><span class="sparkle">✦</span> YOUR EMOTE CONTROL SPACE <span class="sparkle">✦</span></div>
+      <h1>Make Every Move <span>Shine.</span></h1>
+      <p>A fresh, simple space to send your Free Fire emote requests.</p>
+      <div class="hero-pills"><span>✧ LIGHT RAINBOW UI</span><span>● MOBILE FRIENDLY</span><span>✦ SHIZUKA EDITION</span></div>
+    </section>
+    <section class="layout">
+      <div class="panel form-panel">
+        <div class="panel-head"><div><span class="overline">LET'S GET STARTED</span><h2>Send Emote <span class="heading-icon">✧</span></h2><p class="panel-subtitle">Enter your game details below.</p></div><div class="head-mark">01</div></div>
+        <form id="emoteForm">
+          <label for="teamCode">TEAM CODE <span>REQUIRED</span></label>
+          <div class="field"><span class="field-icon">#</span><input id="teamCode" inputmode="numeric" autocomplete="off" placeholder="Enter team code" required></div>
+          <label for="targetUid">TARGET UID <small>OPTIONAL</small></label>
+          <div class="field"><span class="field-icon">◎</span><input id="targetUid" inputmode="numeric" autocomplete="off" placeholder="Enter player UID"></div>
+          <label for="emoteId">EMOTE ID <small>DEFAULT: 909000001</small></label>
+          <div class="field"><span class="field-icon">✦</span><input id="emoteId" inputmode="numeric" autocomplete="off" placeholder="909000001" value="909000001" required></div>
+          <button id="sendBtn" type="submit"><span class="btn-text">SEND EMOTE</span><span class="btn-arrow">↗</span></button>
+          <p class="hint">♡ Use only accounts and game features you are authorized to use.</p>
+        </form>
+      </div>
+      <div class="panel response-panel">
+        <div class="panel-head"><div><span class="overline">LIVE SERVER FEEDBACK</span><h2>API Response <span class="heading-icon">⌁</span></h2><p class="panel-subtitle">Your request result will show here.</p></div><div class="head-mark">02</div></div>
+        <div class="status-row"><span class="status-label">REQUEST STATUS</span><span id="status" class="status idle"><i></i> WAITING</span></div>
+        <div class="response-box" id="response"><div class="empty-icon">✧</div><strong>All set, Shizuka style!</strong><p>Your API response will appear here after sending a request.</p></div>
+        <div class="response-foot"><span>CONNECTION</span><span><i class="live-dot"></i> SAME SERVER</span></div>
+      </div>
+    </section>
+    <section class="note-strip"><span class="note-icon">✦</span><div><strong>Simple controls. Smooth experience.</strong><p>Designed with a soft rainbow look and a mobile-first layout.</p></div><span class="note-star">♡</span></section>
+    <footer><span>© SHIZUKA <b>✦</b> <span class="muted">MADE FOR THE FF COMMUNITY</span></span><span class="muted">LIGHT RAINBOW EDITION</span></footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
