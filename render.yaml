@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: ff-emote-web
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn Emote_API:app --workers 1 --threads 8 --timeout 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: BOT_UID
+        sync: false
+      - key: BOT_PASSWORD
+        sync: false
